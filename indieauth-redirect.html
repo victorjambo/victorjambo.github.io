@@ -3,17 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>indieauth-redirect</title>
-    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-    <link href="https://github.com/victorjambo" rel="me">
+    <title>Redirect to localhost-5001</title>
   </head>
-  <body>
+  <body onload="redirectToLocalhost()">
     <div>
       <h1>IndieAuth Redirect</h1>
-      <p>This page handles the redirect from IndieAuth.</p>
-      <p>Check the console for the query parameters.</p>
-      <button onclick="redirectToLocalhost()">Redirect to localhost</button>
+      <p>Its just placeholder because we can't redirect to localhost:5001 from https://indieauth.com/auth.</p>
+      <button>Redirect to localhost:5001</button>
     </div>
     <script>
       function redirectToLocalhost() {
