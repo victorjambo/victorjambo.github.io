@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form action="https://indieauth.com/auth" method="get">
+      <label for="indie_auth_url">Web Address:</label>
+      <input id="indie_auth_url" type="text" name="me" placeholder="yourdomain.com" />
+      <p><button type="submit">Sign In</button></p>
+      <input type="hidden" name="client_id" value="https://victorjambo.github.io/" />
+      <input type="hidden" name="redirect_uri" value="https://victorjambo.github.io/indieauth-redirect" />
+    </form>
+  </body>
+</html>
