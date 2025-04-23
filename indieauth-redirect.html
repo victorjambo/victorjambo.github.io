@@ -9,6 +9,18 @@
     <link href="https://github.com/victorjambo" rel="me">
   </head>
   <body>
-    <div id="app">indieauth-redirect</div>
+    <div>
+      <h1>IndieAuth Redirect</h1>
+      <p>This page handles the redirect from IndieAuth.</p>
+      <p>Check the console for the query parameters.</p>
+      <button onclick="redirectToLocalhost()">Redirect to localhost</button>
+    </div>
+    <script>
+      function redirectToLocalhost() {
+        const queryString = window.location.search;
+        const redirectUrl = `http://localhost:5001/indieauth-redirect${queryString}`;
+        window.location.href = redirectUrl;
+      }
+    </script>
   </body>
 </html>
