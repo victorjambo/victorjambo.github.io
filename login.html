@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://indieauth.com/auth" rel="authorization_endpoint" />
+    <link href="https://tokens.indieauth.com/token" rel="token_endpoint" />
+    <link href="https://github.com/victorjambo" rel="me">
+    <title>ISN Server Login</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">ISN Local Test Site</a
+        ><button
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-target="#navbarCollapse"
+          data-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto" id="header-page-links">
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/documentation">Documentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-9" role="main">
+          <h2>Login</h2>
+          <form action="https://indieauth.com/auth" method="get">
+            <label for="url">Web Address </label>
+            <input
+              id="url"
+              name="me"
+              placeholder="https://yourdomain.you"
+              type="text"
+            />
+            <p><button type="submit">Sign in</button></p>
+            <input
+              name="client_id"
+              type="hidden"
+              value="https://node-nomads.github.io/isn-server/"
+            />
+            <input
+              name="redirect_uri"
+              type="hidden"
+              value="https://node-nomads.github.io/isn-server/indieauth-redirect"
+            />
+            <input name="state" type="hidden" value="nodeNomads" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <footer>
+        <ul class="list-horizontal">
+          <li>
+            <a class="u-uid u-url" href="/"><i class="bi bi-house-fill"></i></a>
+          </li>
+          <li>
+            <a
+              class="u-url"
+              href="https://node-nomads.github.io/isn-server"
+              rel="me"
+              ><i class="bi bi-github"></i
+            ></a>
+          </li>
+        </ul>
+        <p>
+          <small
+            >This site is part of an EoT ISN, for support please email : </small
+          ><small
+            ><a name="support"></a
+            ><a href="mailto:support@email.com">support@email.com</a></small
+          >
+        </p>
+        <p>
+          <small
+            >Built using isn-toolkit v0.12.0. This software uses the
+            <a href="https://opensource.org/license/mit/">MIT</a> licence. View
+            <a href="/privacy">privacy</a> information.</small
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
